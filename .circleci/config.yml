@@ -125,3 +125,6 @@ workflows:
        - frontend-infrastructre:
             requires:    
               [backend] 
+       - configure-infrastructre:
+            requires:
+              [deploy-infrastructre]

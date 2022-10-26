@@ -91,7 +91,15 @@ jobs:
            --template-file .circleci/files/frontend.yml \
            --stack-name "udapeople-frontend-${CIRCLE_WORKFLOW_ID:0:7}" \
            --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  \
-           --tags project=udapeople           
+           --tags project=udapeople     
+  configure-infrastructre: 
+    docker: 
+     - image: ansible/ansible   
+    steps: 
+      - checkout
+      - install_ansible
+      - add_ssh_keys:
+          fingerprints: ["97:9f:d3:17:0b:17:84:44:22:67:09:f1:8b:f9:3d:d7"]
 
 
 workflows:

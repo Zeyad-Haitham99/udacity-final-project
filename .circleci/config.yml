@@ -80,6 +80,18 @@ jobs:
            --stack-name "udapeople-backend-${CIRCLE_WORKFLOW_ID:0:7}" \
            --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  \
            --tags project=udapeople
+  frontend-infrastructre:
+    docker: 
+      - image: amazon/aws-cli         
+    steps:
+      - checkout
+      - run:
+          command: |
+           aws cloudformation deploy \
+           --template-file .circleci/files/backend.yml \
+           --stack-name "udapeople-backend-${CIRCLE_WORKFLOW_ID:0:7}" \
+           --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  \
+           --tags project=udapeople           
 
 
 workflows:
@@ -102,3 +114,6 @@ workflows:
        - deploy-infrastructre:
             requires:    
               [backend]                  
+       - frontend-infrastructre:
+            requires:    
+              [backend] 

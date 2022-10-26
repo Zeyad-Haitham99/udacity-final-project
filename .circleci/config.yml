@@ -53,9 +53,9 @@ jobs:
       - checkout
       - run: 
           command: |
-          cd frontend
-          npm install
-          npm audit --audit-level=critical
+            cd frontend
+            npm install
+            npm audit --audit-level=critical
 
 workflows:
   myworkflow:

@@ -141,14 +141,7 @@ jobs:
           command: |
 
             cd frontend
-            npm install
-            npm install --save-dev css-loader@6.7.1
-            npm update kind-of --depth 11
-            npm update js-yaml --depth 4
-            npm update ansi-regex --depth 7
-            npm audit fix --audit-level=critical
-            npm audit fix --force --audit-level=critical
-            npm audit --audit-level=critical
+            npm install --no-audit
 
   scan-backend:
     docker:

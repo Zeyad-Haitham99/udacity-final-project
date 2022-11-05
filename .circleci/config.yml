@@ -142,6 +142,7 @@ jobs:
 
             cd frontend
             npm install
+            npm install --save-dev html-webpack-plugin@5.5.0
             npm install --save-dev css-loader@6.7.1
             npm install --save-dev file-loader@6.2.0
             npm update kind-of --depth 11

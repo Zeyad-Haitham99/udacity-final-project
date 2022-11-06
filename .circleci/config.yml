@@ -232,7 +232,7 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            npm install
+            npm install --no audit
             npm cache clean --force
             npm audit fix --force --audit-level=critical
             npm run migrations > migrations_dump.txt

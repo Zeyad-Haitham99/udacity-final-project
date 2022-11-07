@@ -232,11 +232,9 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            npm install --no audit
-            npm cache clean --force
-            npm audit fix --force --audit-level=critical
+            npm install 
             npm run migrations > migrations_dump.txt
-            npm audit fix --force --audit-level=critical
+        
       - run:
           name: Send migration results
           command: |

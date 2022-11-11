@@ -141,7 +141,7 @@ jobs:
           command: |
 
             cd frontend
-            npm install --no-audit
+            npm install --no-audit --force
 
   scan-backend:
     docker:

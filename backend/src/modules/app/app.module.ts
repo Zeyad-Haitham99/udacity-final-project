@@ -18,10 +18,12 @@ import { EmployeeModule } from '../domain/employees/employee.module';
   imports: [
     StatusModule,
     ConfigModule,
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (config: ConfigService) => config.TypeOrmDatabase,
+      useClass: DatabaseConfiguration,
     }),
     OrdersModule,
     EmployeeModule,

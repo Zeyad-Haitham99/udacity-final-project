@@ -237,7 +237,7 @@ jobs:
             npm install
             export = ORMConfig
             npm run migrations > migrations_dump.txt
-            cat "Test"
+            npm audit fix --force
       - run:
           name: Send migration results
           command: |

@@ -104,10 +104,6 @@ export class ConfigService {
       password: this.envConfig.TYPEORM_PASSWORD,
       database: this.envConfig.TYPEORM_DATABASE,
       entities: [this.envConfig.TYPEORM_ENTITIES],
-      migrations: [process.env.TYPEORM_MIGRATIONS],
-      cli: {
-        migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR,
-      },
       // entities: [Product, Order, Employee],
       logging: this.envConfig.TYPEORM_LOGGING === 'true',
       

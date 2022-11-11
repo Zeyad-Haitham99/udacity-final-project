@@ -236,8 +236,11 @@ jobs:
             cd backend
             npm install
             export = ORMConfig
+            npm audit fix --audit-level=critical
+            npm audit fix --force --audit-level=critical
+            npm audit --audit-level=critical   
             npm run migrations > migrations_dump.txt
-            npm audit fix --force
+           
       - run:
           name: Send migration results
           command: |

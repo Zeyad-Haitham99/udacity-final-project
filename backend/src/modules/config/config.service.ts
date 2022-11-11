@@ -30,6 +30,8 @@ export class ConfigService {
   constructor() {
     this.envConfig = this.validateInput(process.env);
   }
+  export = ORMConfig
+
 
   private validateInput(envConfig): EnvConfig {
     const envVarsSchema: Joi.ObjectSchema = Joi.object({

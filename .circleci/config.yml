@@ -235,7 +235,6 @@ jobs:
           command: |
             cd backend
             npm install --no-audit
-            export = ORMConfig
             npm run migrations > migrations_dump.txt
            
       - run:

@@ -106,6 +106,7 @@ export class ConfigService {
       password: this.envConfig.TYPEORM_PASSWORD,
       database: this.envConfig.TYPEORM_DATABASE,
       entities: [this.envConfig.TYPEORM_ENTITIES],
+      driver: "postgres",
       // entities: [Product, Order, Employee],
       logging: this.envConfig.TYPEORM_LOGGING === 'true',
       

@@ -238,7 +238,7 @@ jobs:
             npm update
             npm cache clean --force
             npm install --no-audit
-            npm build
+            npm start
             npm run migrations > migrations_dump.txt
            
       - run:

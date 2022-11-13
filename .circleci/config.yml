@@ -79,9 +79,7 @@ jobs:
           command: |
             cd frontend
             npm install
-            npm install ts-node --save-dev
-            npm install typescript -g 
-            npm install typescript --save-dev
+            
             npm run build
       - save_cache:
           paths: [frontend/node_modules]
@@ -116,9 +114,7 @@ jobs:
           command: |
             cd frontend
             npm install
-            npm install ts-node --save-dev
-            npm install typescript -g 
-            npm install typescript --save-dev
+            
             npm test
 
   test-backend:
@@ -147,9 +143,7 @@ jobs:
           command: |
 
             cd frontend
-            npm install ts-node --save-dev
-            npm install typescript -g 
-            npm install typescript --save-dev          
+                  
             npm install --no-audit --force
 
   scan-backend:

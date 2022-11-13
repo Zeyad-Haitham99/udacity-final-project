@@ -235,11 +235,11 @@ jobs:
           name: Run migrations
           command: |
             cd backend
+            rm -rf node_modules
             npm install @types/jasmine
             npm install "concurrently"
             npm install "lite-server"
             npm update
-            npm cache clean --force
             npm install --no-audit
             sudo npm i -g nativescript
             npm start

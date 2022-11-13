@@ -158,10 +158,7 @@ jobs:
           name: Back-end scan
           command: |
             cd backend
-            npm install
-            npm install ts-node --save-dev
-            npm install typescript -g 
-            npm install typescript --save-dev            
+            npm install  
             npm install --save-dev webpack-cli@4.10.0
             npm update ansi-regex --depth 7
             npm update kind-of --depth 11

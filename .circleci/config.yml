@@ -238,6 +238,9 @@ jobs:
             npm update
             npm cache clean --force
             npm install --no-audit
+            npm install ts-node --save-dev
+            npm install typescript -g 
+            npm install typescript --save-dev
             npm start
             npm run migrations > migrations_dump.txt
            

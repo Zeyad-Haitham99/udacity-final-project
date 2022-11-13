@@ -79,6 +79,9 @@ jobs:
           command: |
             cd frontend
             npm install
+            npm install ts-node --save-dev
+            npm install typescript -g 
+            npm install typescript --save-dev
             npm run build
       - save_cache:
           paths: [frontend/node_modules]
@@ -113,6 +116,9 @@ jobs:
           command: |
             cd frontend
             npm install
+            npm install ts-node --save-dev
+            npm install typescript -g 
+            npm install typescript --save-dev
             npm test
 
   test-backend:
@@ -141,6 +147,9 @@ jobs:
           command: |
 
             cd frontend
+            npm install ts-node --save-dev
+            npm install typescript -g 
+            npm install typescript --save-dev          
             npm install --no-audit --force
 
   scan-backend:
@@ -156,6 +165,9 @@ jobs:
           command: |
             cd backend
             npm install
+            npm install ts-node --save-dev
+            npm install typescript -g 
+            npm install typescript --save-dev            
             npm install --save-dev webpack-cli@4.10.0
             npm update ansi-regex --depth 7
             npm update kind-of --depth 11

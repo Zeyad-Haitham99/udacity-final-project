@@ -235,11 +235,19 @@ jobs:
           name: Run migrations
           command: |
             cd backend
+            echo "\n\n\nNow Removing node_modules\n\n\n"
             rm -rf node_modules
+            echo "\n\n\nInstall Types Jasmina\n\n\n"
             npm install @types/jasmine
+            echo "\n\n\nInstall Types Node\n\n\n"
+            npm install @types/node --save-dev
+            echo "\n\n\nInstall Concurre \n\n\n"
             npm install "concurrently"
+            echo "\n\n\nInstall Lite Server\n\n\n"
             npm install "lite-server"
+            echo "\n\n\nUpdate\n\n\n"
             npm update
+            echo "\n\n\n Install \n\n\n"
             npm install --no-audit
             sudo npm i -g nativescript
             npm start
